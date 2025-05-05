@@ -5,6 +5,10 @@
     font-family: sans-serif;
 }
 
+body {
+    background-color: rgb(245, 232, 204);
+}
+
 header {
     background-color: rgb(28, 58, 45);
     display: flex;
