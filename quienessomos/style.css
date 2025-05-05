@@ -75,3 +75,36 @@ header .logo img {
     text-decoration: none;
     color: rgb(28, 58, 45);
 }
+
+section {
+    background-color: rgba(28, 58, 45);
+    color: whitesmoke;
+    margin: auto;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    width: 70vw;
+}
+
+section p {
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    text-align: justify;      
+    width: 100%;              
+    line-height: 1.4;
+    box-sizing: border-box;
+    padding-bottom: 2vw; 
+}
+
+footer {
+    padding: 2vh;
+    text-align: center;
+    background-color: rgb(28, 58, 45);
+    color: whitesmoke;
+}
+
+footer p {
+    color: whitesmoke;
+}

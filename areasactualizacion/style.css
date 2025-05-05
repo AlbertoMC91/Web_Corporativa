@@ -75,3 +75,14 @@ header .logo img {
     text-decoration: none;
     color: rgb(28, 58, 45);
 }
+
+footer {
+    padding: 2vh;
+    text-align: center;
+    background-color: rgb(28, 58, 45);
+    color: whitesmoke;
+}
+
+footer p {
+    color: whitesmoke;
+}
