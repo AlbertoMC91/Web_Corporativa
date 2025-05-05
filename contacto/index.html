@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Contacto</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
             <a href="#"><img src="/img/logo.png" alt="rutalibre"></a>
         </div>
-        <div class="titulo"><h1>Contacto</h1></div>
+        <div class="titulo">
+            <h1>Contacto</h1>
+        </div>
         <div class="redes">
             <ul>
                 <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
@@ -34,10 +38,87 @@
         </ul>
     </nav>
     <section>
-        <!--FORMULARIO-->
+        <form action="mailto:rutalibre@gmail.com">
+            <h2>Formulario de Reserva de Vehículos</h2>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Alberto" required/>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Ej: García" required/>
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" pattern="^\d{8}[A-Za-z]$" placeholder="Ej: 12345678A" required/> <!--pattern buscado en internet-->
+                <label for="nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="nacimiento" name="nacimiento" min="1930-12-31" max="2007-12-31" required/>
+                <label for="carnet">Fecha obtención del carnet de conducir:</label>
+                <input type="date" id="carnet" name="ano_carnet" min="1930-12-31" max="2007-12-31" required/>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required/>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="^(\+34|0034|34)?[6-7][0-9]{8}$" placeholder="Ej: +34633XXX865" required/> <!--pattern buscado en internet-->
+            </fieldset>
+            <fieldset>
+                <legend>Información del Alquiler</legend>
+                <label for="inicio">Fecha de inicio:</label>
+                <input type="date" id="inicio" name="inicio" required/>
+                <label for="fin">Fecha de fin:</label>
+                <input type="date" id="fin" name="fin" required/>
+                <label for="recogida">Ciudad de recogida:</label>
+                <select id="recogida" name="recogida" required>
+                    <option value="">Selecciona</option>
+                    <option value="camper">Madrid</option>
+                    <option value="furgoneta">Barcelona</option>
+                    <option value="todoterreno">Valencia</option>
+                    <option value="turismo">Bilbao</option>
+                    <option value="moto">Malaga</option>
+                </select>
+                <label for="entrega">Ciudad de entrega:</label>
+                <select id="entrega" name="entrega" required>
+                    <option value="">Selecciona</option>
+                    <option value="madrid">Madrid</option>
+                    <option value="barcelona">Barcelona</option>
+                    <option value="valencia">Valencia</option>
+                    <option value="bilbao">Bilbao</option>
+                    <option value="mallaga">Malaga</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Selección del Vehículo</legend>
+                <label for="vehiculo">Vehículo:</label>
+                <select id="vehiculo" name="vehiculo" required>
+                    <option value="">Selecciona</option>
+                    <option value="vw_california_camper">Volkswagen California, Camper</option>
+                    <option value="fiat_ducato_camper">Fiat Ducato, Camper</option>
+                    <option value="mercedes_sprinter_camper">Mercedes-Benz Sprinter, Camper</option>
+                    <option value="ford_tourneo_furgoneta">Ford Tourneo Custom, Furgoneta</option>
+                    <option value="renault_trafic_furgoneta">Renault Trafic, Furgoneta</option>
+                    <option value="mercedes_vito_furgoneta">Mercedes-Benz Vito, Furgoneta</option>
+                    <option value="toyota_hilux_4x4">Toyota Hilux, 4x4 Todo Terreno</option>
+                    <option value="dacia_duster_4x4">Dacia Duster, 4x4 Todo Terreno</option>
+                    <option value="peugeot_rifter_turismo">Peugeot Rifter, Turismo</option>
+                    <option value="citroen_berlingo_turismo">Citroën Berlingo, Turismo</option>
+                    <option value="bmw_gs_moto">BMW GS 1250, Moto</option>
+                    <option value="yamaha_tenere_moto">Yamaha Ténéré 700, Moto</option>
+                </select>
+                <label for="seguro">Cobertura del seguro:</label>
+                <select id="seguro" name="seguro" required>
+                    <option value="">Selecciona</option>
+                    <option value="basico">Básico</option>
+                    <option value="completo">Completo</option>
+                    <option value="todo_riesgo">Todo riesgo con franquicia</option>
+                    <option value="sin_franquicia">Todo riesgo sin franquicia</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Comentarios adicionales</legend>
+                <textarea name="comentarios" rows="5" placeholder="Indica si tienes necesidades especiales o peticiones adicionales."></textarea>
+            </fieldset>
+            <button type="submit">Enviar solicitud</button>
+        </form>
     </section>
     <footer>
         <p>&copy;Web Corporativa creada para la materia de Lenguaje de Marcas <br> del CFGS DAW</p>
     </footer>
 </body>
+
 </html>

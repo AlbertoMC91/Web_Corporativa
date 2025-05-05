@@ -80,6 +80,74 @@ header .logo img {
     color: rgb(28, 58, 45);
 }
 
+section {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+form {
+    background-color: whitesmoke;
+    max-width: 50%;
+    margin: auto;
+    padding: 2vh;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.449);
+  }
+  
+  h2 {
+    text-align: center;
+    color: rgb(28, 58, 45);
+    margin-bottom: 2vh;
+  }
+  
+  fieldset {
+    border: 1px solid rgb(28, 58, 45);
+    border-radius: 10px;
+    padding: 2vh;
+    margin-bottom: 2vh;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: rgb(28, 58, 45);
+  }
+  
+  label {
+    display: block;
+    margin-top: 2vh;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 2vh;
+    margin-top: 2vh;
+    border-radius: 6px;
+    border: 1px solid rgb(28, 58, 45);
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: rgb(28, 58, 45);
+    color: whitesmoke;
+    padding: 14px 24px;
+    font-size: 2vh;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: rgb(28, 58, 45);
+  }
+
 footer {
     padding: 2vh;
     text-align: center;
