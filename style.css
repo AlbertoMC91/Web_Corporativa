@@ -58,6 +58,14 @@ header .logo img {
     color: whitesmoke;
 }
 
+.hamburguesa {
+    display: none;
+    font-size: 4vh;
+    cursor: pointer;
+    padding: 1vh;
+    color: whitesmoke;
+}
+
 .menu {
     width: 100%;
     background-color: whitesmoke;
@@ -192,4 +200,461 @@ footer {
 
 footer p {
     color: whitesmoke;
+}
+
+/*Adaptación de ancho fijo de resoluciones de más de 1300px de ancho.*/
+
+@media screen and (min-width: 1301px) {
+    body {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+/*Adaptación optimizada para verse en una tablet en posición vertical.*/
+@media screen and (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        height: auto;
+        padding: 2vh;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .logo a {
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo a img {
+        width: 30%;
+    }
+
+    .eslogan h1 {
+        font-size: 4vh;
+    }
+
+    .seccion {
+        flex-direction: column;
+    }
+
+    .pieSeccion {
+        flex-direction: column;
+    }
+
+    .novedades {
+        width: 100%;
+    }
+
+    .banner  {
+        width: 100%;
+    }
+
+    section, aside {
+        font-size: 3vh;
+        width: 100%;
+        margin-right: 0;
+        border-right: none;
+    }
+
+    aside {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .noticias {
+        padding: 0;
+    }
+
+    .hamburguesa {
+        display: block;
+        text-align: center;
+        background-color: rgb(28, 58, 45);
+        color: white;
+        font-size: 2em;
+        padding: 1vh;
+        cursor: pointer;
+    }
+
+    .desplegable {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: whitesmoke;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    .desplegable:hover .menu {
+        display: block;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .menu ul li {
+        margin: 1vh 0;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .redes {
+        justify-content: center;
+        padding: 1vh;
+    }
+
+    .noticias {
+        flex-direction: column;
+        padding-left: 2vh;
+    }
+
+    .imgNoticias {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+
+    .imgNoticias img {
+        width: 20%;
+    }
+}
+/*Adaptación optimizada para verse en una tablet en posición horizontal.*/
+@media screen and (min-width: 900px) and (max-width: 1300px) and (orientation: landscape) {
+    header {
+        height: auto;
+        padding: 2vh;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .logo a {
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo a img {
+        width: 30%;
+    }
+
+    header > * {
+        padding-bottom: 2vh;
+    }
+
+    .eslogan h1 {
+        font-size: 4.5vh;
+    }
+
+    .hamburguesa {
+        display: block;
+        text-align: center;
+        background-color: rgb(28, 58, 45);
+        color: white;
+        font-size: 2em;
+        padding: 1vh;
+        cursor: pointer;
+    }
+
+    .desplegable {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: whitesmoke;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    .desplegable:hover .menu {
+        display: block;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .menu ul li {
+        margin: 1vh 0;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    section {
+        width: 65%;
+    }
+
+    section img {
+        padding: 0;
+    }
+
+    aside {
+        width: 35%;
+    }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición vertical.*/
+@media screen and (max-width: 599px) and (orientation: portrait) {
+    header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    header > * {
+        padding-bottom: 2vh;
+    }
+
+    .logo, .redes {
+        justify-content: center;
+    }
+
+    .redes {
+        padding: 0;
+    }
+
+    .eslogan {
+        width: 90%;
+    }
+
+    .eslogan h1 {
+        font-size: 3vh;
+    }
+
+    .hamburguesa {
+        display: block;
+        text-align: center;
+        background-color: rgb(28, 58, 45);
+        color: white;
+        font-size: 2em;
+        padding: 1vh;
+        cursor: pointer;
+    }
+
+    .desplegable {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: whitesmoke;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    .desplegable:hover .menu {
+        display: block;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .menu ul li {
+        margin: 1vh 0;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .seccion {
+        flex-direction: column;
+    }
+
+    .seccion img {
+        padding: 0;
+    }
+
+    section, aside {
+        width: 100%;
+        border-right: none;
+        padding: 2vh;
+        margin-right: 0;
+    }
+
+    .pieSeccion {
+        flex-direction: column;
+    }
+
+    .novedades {
+        width: 100%;
+    }
+
+    .noticias {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .imgNoticias {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+
+    .imgNoticias img {
+        width: 20%;
+    }
+
+    .banner {
+        width: 90%;
+    }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición horizontal.*/
+@media screen and (max-width: 899px) and (orientation: landscape) {
+    header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    header > * {
+        padding-bottom: 2vh;
+    }
+    
+    .logo, .redes {
+        justify-content: center;
+    }
+    
+    .redes {
+        padding: 0;
+    }
+
+    .eslogan {
+        width: 90%;
+    }
+
+    .eslogan h1 {
+        font-size: 3vh;
+    }
+
+    .hamburguesa {
+        display: block;
+        text-align: center;
+        background-color: rgb(28, 58, 45);
+        color: white;
+        font-size: 2em;
+        padding: 1vh;
+        cursor: pointer;
+    }
+
+    .desplegable {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: whitesmoke;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    .desplegable:hover .menu {
+        display: block;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .menu ul li {
+        margin: 1vh 0;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    .seccion {
+        flex-direction: column;
+    }
+
+    .imagenSection {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 4vh;
+    }
+
+    .imagenSection img {
+        padding: 0;
+    }
+
+    section, aside {
+        width: 100%;
+        margin-right: 0;
+        border-right: none;
+    }
+
+    .noticias {
+        flex-direction: column;
+        padding-left: 2vh;
+    }
+
+    .imgNoticias {
+        width: 20%;
+        margin-bottom: 2vh;
+    }
+
+    .imgNoticias img {
+        width: 20%;
+    }
+
+    .banner {
+        width: 50%;
+    }
 }

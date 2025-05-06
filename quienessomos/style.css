@@ -15,6 +15,7 @@ header {
     flex-direction: row;
     width: 100%;
     height: 15vh;
+    align-items: center;
 }
 
 header .logo {
@@ -57,6 +58,14 @@ header .logo img {
     color: whitesmoke;
 }
 
+.hamburguesa {
+    display: none;
+    font-size: 4vh;
+    cursor: pointer;
+    padding: 1vh;
+    color: whitesmoke;
+}
+
 .menu {
     width: 100%;
     background-color: whitesmoke;
@@ -94,7 +103,6 @@ section p {
     text-align: justify;      
     width: 100%;              
     line-height: 1.4;
-    box-sizing: border-box;
     padding-bottom: 2vw; 
 }
 
@@ -107,4 +115,272 @@ footer {
 
 footer p {
     color: whitesmoke;
+}
+
+/*Adaptación de ancho fijo de resoluciones de más de 1300px de ancho.*/
+@media screen and (min-width: 1301px) {
+    body {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+/*Adaptación optimizada para verse en una tablet en posición vertical.*/
+@media screen and (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
+    header {
+        height: auto;
+        padding: 2vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 2vh;
+    }
+
+    .titulo {
+        width: 100%;
+    }
+
+    .titulo h1 {
+        font-size: 4vh;
+        text-align: center;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    section p {
+        font-size: 3vh;
+    }
+
+    .hamburguesa {
+        display: block;
+        background-color: rgb(28, 58, 45);
+        text-align: center;
+    }
+
+    .desplegable {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: whitesmoke;
+        z-index: 10;
+    }
+
+    .desplegable:hover .menu {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 1vh 0;
+    }
+
+    .redes {
+        justify-content: center;
+        padding: 1vh;
+    }
+}
+
+/*Adaptación optimizada para verse en una tablet en posición horizontal.*/
+@media screen and (min-width: 900px) and (max-width: 1300px) and (orientation: landscape) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    header .logo {
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 2vh;
+    }
+    
+    .titulo {
+        width: 100%;
+    }
+
+    .titulo h1 {
+        font-size: 4vh;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    .redes {
+        padding: 0;
+    }
+
+    .hamburguesa {
+        display: block;
+        background-color: rgb(28, 58, 45);
+        text-align: center;
+    }
+
+    .desplegable {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: whitesmoke;
+        z-index: 10;
+    }
+
+    .desplegable:hover .menu {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 1vh 0;
+    }
+
+    section {
+        width: 85%;
+    }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición vertical.*/
+@media screen and (max-width: 599px) and (orientation: portrait) {
+    header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .logo, .redes {
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 40%;
+    }
+
+    .titulo h1 {
+        font-size: 3vh;
+    }
+
+    section {
+        width: 95%;
+        font-size: 2.5vh;
+    }
+
+    .hamburguesa {
+        display: block;
+        background-color: rgb(28, 58, 45);
+        text-align: center;
+    }
+
+    .desplegable {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: whitesmoke;
+        z-index: 10;
+    }
+
+    .desplegable:hover .menu {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 1vh 0;
+    }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición horizontal.*/
+@media screen and (max-width: 899px) and (orientation: landscape) {
+    header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .logo, .redes {
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 30%;
+    }
+
+    .titulo h1 {
+        font-size: 3vh;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .hamburguesa {
+        display: block;
+        background-color: rgb(28, 58, 45);
+        text-align: center;
+    }
+
+    .desplegable {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: whitesmoke;
+        z-index: 10;
+    }
+
+    .desplegable:hover .menu {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 1vh 0;
+    }
 }
