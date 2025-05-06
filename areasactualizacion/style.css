@@ -76,6 +76,49 @@ header .logo img {
     color: rgb(28, 58, 45);
 }
 
+section{
+    padding: 40px 100px;
+    background-color: rgb(245, 232, 204);
+    color: rgb(28, 58, 45);
+}
+
+section h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(28,58 ,45 );
+}
+
+.area{
+    margin-bottom: 30px;
+    background-color: whitesmoke;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.area-titulo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.area-titulo img{
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.area-titulo h3{
+    font-size: 24px;
+    color: rgb(28, 58, 45);
+    margin: 0;
+}
+.area p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
 footer {
     padding: 2vh;
     text-align: center;
