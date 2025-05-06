@@ -129,3 +129,178 @@ footer {
 footer p {
     color: whitesmoke;
 }
+
+/*Adaptación de ancho fijo de resoluciones de más de 1300px de ancho.*/
+@media screen and (min-width: 1300px) {
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    main, header, nav.menu, section, footer{
+        width: 1200px;
+    }
+}
+
+
+/*Adaptación optimizada para verse en una tablet en posición vertical.*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .area{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .area-titulo{
+        width: 250px;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .area p{
+        font-size: 18px;
+    }
+    section{
+        padding: 40px 60px;
+    };
+}
+
+/*Adaptación optimizada para verse en una tablet en posición horizontal.*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    section{
+        padding: 40px 60px;
+    }
+    .area{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .area-titulo{
+        width: 250px;
+        height: auto;
+        margin-right: 10px;
+    }
+    .area-titulo img{
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+    }
+    .area-titulo h3{
+        font-size: 22px;
+    }
+    .area p{
+        font-size: 18px;
+    }
+    .titulo h1{
+        font-size: 4.5vh;
+    }
+    .menu ul{
+        font-size: 2.5vh;
+        flex-wrap: wrap;
+    }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición vertical.*/
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    section {
+        padding: 20px 30px;
+    }
+
+    .area {
+        display: block;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .area-titulo {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .area-titulo img {
+        width: 50px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .area-titulo h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .area p {
+        font-size: 16px;
+    }
+
+    .titulo h1 {
+        font-size: 5vh;
+    }
+
+    .menu ul {
+        font-size: 2.5vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 2vh;
+    }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición horizontal.*/
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    section {
+        padding: 20px 30px;
+    }
+
+    .area {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .area-titulo {
+        width: 120px;
+        margin-right: 15px;
+    }
+
+    .area-titulo img {
+        width: 40px;
+        height: auto;
+    }
+
+    .area-titulo h3 {
+        font-size: 18px;
+    }
+
+    .area p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .titulo h1 {
+        font-size: 5vh;
+    }
+
+    .menu ul {
+        font-size: 2.5vh;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer {
+        font-size: 2vh;
+    }
+}
+
+
