@@ -85,6 +85,8 @@ section {
     margin-bottom: 2vh;
 }
 
+/*Se limita el ancho del formulario para evitar que se expanda demasiado y se mantenga centrado
+Fondo blanco y sombra más pronunciada para destacar el formulario del resto del contenido*/
 form {
     background-color: whitesmoke;
     max-width: 50%;
@@ -117,6 +119,9 @@ form {
     margin-top: 2vh;
   }
   
+  
+  /*Todos los imputs y selects ocupan el ancho completo del formulario para mantener su alineación.
+  Bordes redondeados y color verde oscuro para mantener la coherencia.*/
   input,
   select,
   textarea {
@@ -132,6 +137,7 @@ form {
     resize: vertical;
   }
   
+  /*Botón de envío estilizado con el mismo verde del header y footer, para mantener la coherencia visual*/
   button {
     background-color: rgb(28, 58, 45);
     color: whitesmoke;
