@@ -1,3 +1,4 @@
+/*Eliminamos márgenes y paddings predeterminados*/
 * {
     margin: 0px;
     padding: 0px;
@@ -5,10 +6,12 @@
     font-family: sans-serif;
 }
 
+/*Fondo beige claro para el body*/
 body {
     background-color: rgb(245, 232, 204);
 }
 
+/*Uso de flex para organizar los elementos y centramos verticalmente el contenido*/
 header {
     background-color: rgb(28, 58, 45);
     display: flex;
@@ -18,30 +21,34 @@ header {
     align-items: center;
 }
 
+/*Logo ubicado en el lado izquierdo*/
 header .logo {
     height: 15vh;
     display: flex;
     margin-left: 6vh;
 }
 
+/*Ajusta el logo al c100% del contenedor y mantiene la proporción original*/
 header .logo img {
     height: 100%;
     object-fit: contain;
 }
 
+/*Título de la sección*/
 .titulo {
     width: 75%;
     margin: auto;
     margin-left: 0;
 }
 
+/*Tamaño del título adaptativo y color blanco para fácil legilivilidad*/
 .titulo h1 {
     color: whitesmoke;
     width: 100%;
     text-align: center;
     font-size: 5.5vh;
 }
-
+/*Redes sociales alineadas a la derecha*/
 .redes {
     padding-right: 2vh;
     display: flex;
@@ -49,15 +56,18 @@ header .logo img {
     align-items: center;
 }
 
+/*Tamaño grande para iconos*/
 .redes ul {
     list-style: none;
     font-size: 5vh;
 }
 
+/*Color blanco para destacar en el fondo oscuro*/
 .redes ion-icon {
     color: whitesmoke;
 }
 
+/*Icono de menú hamburguesa, solo visible para dispositivos pequeños o minimización de la pantalla*/
 .hamburguesa {
     display: none;
     font-size: 4vh;
@@ -71,6 +81,7 @@ header .logo img {
     background-color: whitesmoke;
 }
 
+/*Espacio entre los enlaces y tamaño del texto*/
 .menu ul {
     padding: 10px;
     list-style: none;
@@ -80,11 +91,13 @@ header .logo img {
     font-size: 3vh;
 }
 
+/*Sin subrayado y verde oscuro*/
 .menu ul li a {
     text-decoration: none;
     color: rgb(28, 58, 45);
 }
 
+/*Fondo verde oscuro, texto en blanco, espacio superior e inferior, bordes redondeados y sombra*/
 section {
     background-color: rgba(28, 58, 45);
     color: whitesmoke;
@@ -97,6 +110,7 @@ section {
     width: 70vw;
 }
 
+/*Tamaño adaptativo, texto justificado y espaciado entre lineas*/
 section p {
     font-size: 1.5vw;
     font-family: sans-serif;
@@ -126,7 +140,9 @@ footer p {
 }
 
 /*Adaptación optimizada para verse en una tablet en posición vertical.*/
+
 @media screen and (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
+    /*Ajuste automático de la altura*/
     header {
         height: auto;
         padding: 2vh;
@@ -149,15 +165,17 @@ footer p {
         font-size: 4vh;
         text-align: center;
     }
-
+    
+    /*Sección más estrecha*/
     section {
         width: 90%;
     }
-
+    
+    /*Aumenta el tamaño del texto*/
     section p {
         font-size: 3vh;
     }
-
+    /*Icono hamburguesa en bloque*/
     .hamburguesa {
         display: block;
         background-color: rgb(28, 58, 45);
@@ -168,7 +186,8 @@ footer p {
         position: relative;
         width: 100%;
     }
-
+    
+    /*Menú oculto por defecto*/
     .menu {
         display: none;
         position: absolute;
@@ -178,7 +197,7 @@ footer p {
         background-color: whitesmoke;
         z-index: 10;
     }
-
+    /*Menú desplegable al hacer hover*/
     .desplegable:hover .menu {
         display: block;
     }
@@ -200,6 +219,7 @@ footer p {
 
 /*Adaptación optimizada para verse en una tablet en posición horizontal.*/
 @media screen and (min-width: 900px) and (max-width: 1300px) and (orientation: landscape) {
+    
     header {
         flex-direction: column;
         align-items: center;
@@ -251,7 +271,7 @@ footer p {
     .desplegable:hover .menu {
         display: block;
     }
-
+    
     .menu ul {
         flex-direction: column;
         align-items: center;

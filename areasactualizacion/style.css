@@ -5,10 +5,14 @@
     font-family: sans-serif;
 }
 
+/*Se utiliza un fondo gris claro para diferenciar visualmente esta sección del resto del sitio
+Misma fuente para mantener la coherencia visual*/
 body {
     background-color: rgb(245, 232, 204);
+    font-family: sans-serif;
 }
 
+/*Fondo verde oscuro y texto centrado en blanco para destacar sobre el fondo*/
 header {
     background-color: rgb(28, 58, 45);
     display: flex;
@@ -17,23 +21,27 @@ header {
     height: 15vh;
 }
 
+/*Logo de la cabecera con separación del borde izquierdo*/
 header .logo {
     height: 15vh;
     display: flex;
     margin-left: 6vh;
 }
 
+/*Mantiene la proporción de la imagen*/
 header .logo img {
     height: 100%;
     object-fit: contain;
 }
 
+/*Título centrado en la cabecera*/
 .titulo {
     width: 75%;
     margin: auto;
     margin-left: 0;
 }
 
+/*Tamaño del texto adaptativo con 5.5vh*/
 .titulo h1 {
     color: whitesmoke;
     width: 100%;
@@ -41,6 +49,7 @@ header .logo img {
     font-size: 5.5vh;
 }
 
+/*Redes sociales alineadas a la derecha*/
 .redes {
     padding-right: 2vh;
     display: flex;
@@ -48,6 +57,7 @@ header .logo img {
     align-items: center;
 }
 
+/*Iconos grandes para fácil visualización*/
 .redes ul {
     list-style: none;
     font-size: 5vh;
@@ -62,6 +72,7 @@ header .logo img {
     background-color: whitesmoke;
 }
 
+/*Centramos los elementos y le damos tamaño al texto*/
 .menu ul {
     padding: 10px;
     list-style: none;
@@ -71,11 +82,60 @@ header .logo img {
     font-size: 3vh;
 }
 
+/*Quitamos subrayado y mismo verde oscuro*/
 .menu ul li a {
     text-decoration: none;
     color: rgb(28, 58, 45);
 }
 
+/*Espaciado interno amplio para las secciones y texto oscuro para buena legilibilidad.*/
+section{
+    padding: 40px 100px;
+    background-color: rgb(245, 232, 204);
+    color: rgb(28, 58, 45);
+}
+
+section h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(28,58 ,45 );
+}
+/*Espacio entre áreas, espaciado interno, bordes redondeados y una peqeña sombra*/
+.area{
+    margin-bottom: 30px;
+    background-color: whitesmoke;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.area-titulo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/*Tamaño fijo para los iconos*/
+.area-titulo img{
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.area-titulo h3{
+    font-size: 24px;
+    color: rgb(28, 58, 45);
+    margin: 0;
+}
+
+/*Espaciado entre lineas*/
+.area p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*Pie de página*/
 footer {
     padding: 2vh;
     text-align: center;
@@ -86,3 +146,212 @@ footer {
 footer p {
     color: whitesmoke;
 }
+/*Adaptación optimizada para verse en una tablet en posición vertical.*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    section {
+        padding: 30px 50px;
+    }
+    
+    /*Centrado del contenido*/
+    .area {
+        display: block;
+        margin-bottom: 25px;
+        text-align: center; 
+    }
+
+    .area-titulo {
+        margin-bottom: 15px;
+    }
+    
+    /*Iconos más grandes para pantallas más grandes*/
+    .area-titulo img {
+        width: 70px; 
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .area-titulo h3 {
+        font-size: 20px;
+    }
+
+    .area p {
+        font-size: 16px;
+    }
+
+    .titulo h1 {
+        font-size: 5vh;
+    }
+    
+    /*Menú en posición vertical*/
+    .menu ul {
+        font-size: 2.5vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 2vh;
+    }
+}
+/*Adaptación optimizada para verse en una tablet en posición horizontal.*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    section {
+        padding: 40px 60px;
+    }
+    
+    /*Disposición horizontal*/
+    .area {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center; 
+        margin-bottom: 30px;
+    }
+    
+    /*Iconos más grandes*/
+    .area-titulo {
+        width: 250px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        text-align: center; 
+    }
+
+    .area-titulo img {
+        width: 60px; 
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .area-titulo h3 {
+        font-size: 22px;
+    }
+
+    .area p {
+        font-size: 18px;
+    }
+
+    .titulo h1 {
+        font-size: 4.5vh;
+    }
+    
+    /*Reorganiza el menú*/
+    .menu ul {
+        font-size: 2.5vh;
+        flex-wrap: wrap;
+    }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición vertical.*/
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    section {
+        padding: 20px 30px;
+    }
+
+    .area {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center; 
+    }
+
+    .area-titulo {
+        margin-bottom: 15px;
+    }
+    
+    /*Iconos más pequeños*/
+    .area-titulo img {
+        width: 50px; 
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .area-titulo h3 {
+        font-size: 18px; 
+    }
+
+    .area p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .titulo h1 {
+        font-size: 5vh;
+    }
+    
+    /*Menú vertical*/
+    .menu ul {
+        font-size: 2.5vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 2vh;
+    }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición horizontal.*/
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    section {
+        padding: 20px 30px;
+    }
+
+    .area {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center; 
+        margin-bottom: 20px;
+    }
+
+    .area-titulo {
+        width: 120px;
+        margin-right: 15px;
+        margin-bottom: 0;
+        text-align: center; 
+    }
+
+    .area-titulo img {
+        width: 40px; 
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .area-titulo h3 {
+        font-size: 18px;
+    }
+
+    .area p {
+        font-size: 14px;
+    }
+
+    .titulo h1 {
+        font-size: 5vh;
+    }
+
+    .menu ul {
+        font-size: 2.5vh;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer {
+        font-size: 2vh;
+    }
+}
+
+
+
+
+
+

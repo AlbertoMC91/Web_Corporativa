@@ -1,3 +1,9 @@
+/*Este archivo establece los estilos para todas las pestañas del sitio web. Mantiene una estética uniforme
+ en toda la web y define la estructura general de los elementos principales.*/
+
+ /* Con margin y padding eliminamos los márgenes y rellenos por defecto.
+Usamos border box para que el ancho y alto incluyan los bordes y el padding
+Aplicamos la fuente elegida.*/
 * {
     margin: 0px;
     padding: 0px;
@@ -6,10 +12,13 @@
     color: rgb(28, 58, 45);
 }
 
+
+/*Elegimos un fondo beige claro para tener un página cálida y agradable*/
 body {
     background-color: rgb(245, 232, 204);
 }
 
+/*Header(encabezado) Elegimos el color y alineamos los elementos horizontalmente*/
 header {
     background-color: rgb(28, 58, 45);
     display: flex;
@@ -18,6 +27,7 @@ header {
     height: 20vh;
 }
 
+/*Logotipo. Se mantiene alineado verticalmente y ocupa el 20% de la altura*/
 header .logo {
     height: 20vh;
     display: flex;
@@ -35,6 +45,7 @@ header .logo img {
     margin: auto;
 }
 
+/*Eslogan centrado, en blanco para destacar sobre el fondo verde oscuro.*/
 .eslogan h1 {
     color: whitesmoke;
     width: 100%;
@@ -42,6 +53,7 @@ header .logo img {
     font-size: 5.5vh;
 }
 
+/*Alineación de los iconos de redes sociales a la derecha del encabezado*/
 .redes {
     padding-right: 2vh;
     display: flex;
@@ -66,11 +78,13 @@ header .logo img {
     color: whitesmoke;
 }
 
+/*Fondo blanco para el menú, separándolo del encabezado*/
 .menu {
     width: 100%;
     background-color: whitesmoke;
 }
 
+/*Los enlaces del menú se distribuyen horizontalmente con un espacio de 2vh, manteniendo separación entre ellos*/
 .menu ul {
     padding: 10px;
     list-style: none;
@@ -84,6 +98,8 @@ header .logo img {
     text-decoration: none;
 }
 
+/*Fondo beige claro para mantener la coherencia con el body
+Margen amplio para mejorar la lectura*/
 section {
     width: 60%;
     display: flex;
@@ -191,6 +207,8 @@ aside > * {
     border-radius: 10px;
 }
 
+/*Se mantiene el fondo verde oscuro que el header para crear un ambiente más visual y estructurado.
+Texto blanco para mantener una buena lectura.*/
 footer {
     padding: 2vh;
     text-align: center;
