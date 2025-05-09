@@ -1,3 +1,4 @@
+/*Estilo base para todos los elementos, elimina márgenes y relleno por defecto, aplica el modelo de caja border-box*/
 * {
     margin: 0px;
     padding: 0px;
@@ -5,6 +6,7 @@
     font-family: sans-serif;
 }
 
+/*El html ocupa el 100% de la altura de la ventana del navegador*/
 html {
     height: 100%;
 }
@@ -13,6 +15,7 @@ body {
     background-color: rgb(245, 232, 204);
 }
 
+/*Diseño en fila con flexbox y altura proporcional a la pantalla*/
 header {
     background-color: rgb(28, 58, 45);
     display: flex;
@@ -21,23 +24,27 @@ header {
     height: 15vh;
 }
 
+/*Para el contenedor del logo dentro del header, antiene su altura y separa del borde izquierdo*/
 header .logo {
     height: 15vh;
     display: flex;
     margin-left: 6vh;
 }
 
+/*Ajusta la imagen del logo para que escale correctamente dentro de su contenedor*/
 header .logo img {
     height: 100%;
     object-fit: contain;
 }
 
+/*Para el contenedor del título, ocupa la mayor parte del ancho y lo alinea a la izquierda*/
 .titulo {
     width: 75%;
     margin: auto;
     margin-left: 0;
 }
 
+/*Estilo del texto del título principal del header*/
 .titulo h1 {
     color: whitesmoke;
     width: 100%;
@@ -45,6 +52,7 @@ header .logo img {
     font-size: 5.5vh;
 }
 
+/*Para el contenedor de redes sociales en el header, alineado a la derecha y centrado verticalmente*/
 .redes {
     padding-right: 2vh;
     display: flex;
@@ -52,6 +60,7 @@ header .logo img {
     align-items: center;
 }
 
+/*Elimina viñetas de la lista de iconos de redes y define tamaño de fuente grande*/
 .redes ul {
     list-style: none;
     font-size: 5vh;
@@ -61,11 +70,22 @@ header .logo img {
     color: whitesmoke;
 }
 
+/*Para el ícono de menú hamburguesa, oculto por defecto*/
+.hamburguesa {
+  display: none;
+  font-size: 4vh;
+  cursor: pointer;
+  padding: 1vh;
+  color: whitesmoke;
+}
+
+/*Para el contenedor del menú de navegación, ocupa el ancho completo con fondo claro*/
 .menu {
     width: 100%;
     background-color: whitesmoke;
 }
 
+/*Parala lista de navegación,sin viñetas, en fila con espacio entre enlaces, y tamaño de texto adecuado*/
 .menu ul {
     padding: 10px;
     list-style: none;
@@ -75,16 +95,19 @@ header .logo img {
     font-size: 3vh;
 }
 
+/*Para los enlaces de navegación, sin subrayado y con color coherente con la paleta*/
 .menu ul li a {
     text-decoration: none;
     color: rgb(28, 58, 45);
 }
 
+/*Márgenes verticales para las secciones principales del contenido*/
 section {
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
+/*Formulario centrado, con fondo claro, borde redondeado y sombra para destacarlo*/
 form {
     background-color: whitesmoke;
     max-width: 50%;
@@ -92,47 +115,54 @@ form {
     padding: 2vh;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.449);
-  }
-  
-  h2 {
+}
+
+/*Título del formulario, centrado y con color del tema*/
+h2 {
     text-align: center;
     color: rgb(28, 58, 45);
     margin-bottom: 2vh;
-  }
-  
-  fieldset {
+}
+
+/*Campos del formulario, bordes redondeados y espaciado interno */
+fieldset {
     border: 1px solid rgb(28, 58, 45);
     border-radius: 10px;
     padding: 2vh;
     margin-bottom: 2vh;
-  }
-  
-  legend {
+}
+
+/*Texto del título de cada grupo del formulario*/
+legend {
     font-weight: bold;
     color: rgb(28, 58, 45);
-  }
-  
-  label {
+}
+
+/*Cada label aparece en una línea nueva con separación superior*/
+label {
     display: block;
     margin-top: 2vh;
-  }
-  
-  input,
-  select,
-  textarea {
+}
+
+/*Inputs, selects y áreas de texto, ancho completo, espaciado, bordes redondeados*/
+input,
+select,
+textarea {
     width: 100%;
     padding: 2vh;
     margin-top: 2vh;
     border-radius: 6px;
     border: 1px solid rgb(28, 58, 45);
     box-sizing: border-box;
-  }
-  
-  textarea {
+}
+
+/*Permite que el textarea se redimensione solo verticalmente*/
+textarea {
     resize: vertical;
-  }
-  
-  button {
+}
+
+/*Botón de enviar, color del tema, bordes redondeados, texto claro y efecto hover*/
+button {
     background-color: rgb(28, 58, 45);
     color: whitesmoke;
     padding: 14px 24px;
@@ -142,12 +172,9 @@ form {
     cursor: pointer;
     width: 100%;
     margin-top: 20px;
-  }
-  
-  button:hover {
-    background-color: rgb(28, 58, 45);
-  }
+}
 
+/*Pie de página, centrado, con color de fondo y texto claros*/
 footer {
     padding: 2vh;
     text-align: center;
@@ -155,6 +182,221 @@ footer {
     color: whitesmoke;
 }
 
+/*Color del texto dentro del pie de página*/
 footer p {
     color: whitesmoke;
+}
+
+/*Adaptación de ancho fijo de resoluciones de más de 1300px de ancho.*/
+@media screen and (min-width: 1301px) {
+  body {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+/*Adaptación optimizada para verse en una tablet en posición vertical.*/
+@media screen and (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
+  header {
+    height: auto;
+    padding: 2vh;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .logo {
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2vh;
+  }
+
+  .titulo {
+    width: 100%;
+  }
+
+  .titulo h1 {
+    font-size: 4vh;
+    text-align: center;
+  }
+
+  form {
+    max-width: 90%;
+  }
+
+  .hamburguesa {
+    display: block;
+    background-color: rgb(28, 58, 45);
+    text-align: center;
+}
+
+.desplegable {
+    position: relative;
+    width: 100%;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: whitesmoke;
+    z-index: 10;
+}
+
+.desplegable:hover .menu {
+    display: block;
+}
+
+.menu ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu ul li {
+    margin: 1vh 0;
+}
+
+  .redes {
+    justify-content: center;
+    padding: 1vh;
+  }
+}
+
+/*Adaptación optimizada para verse en una tablet en posición horizontal.*/
+@media screen and (min-width: 900px) and (max-width: 1300px) and (orientation: landscape) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  header .logo {
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2vh;
+  }
+
+  .titulo {
+    width: 100%;
+  }
+
+  .titulo h1 {
+    font-size: 4vh;
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+
+  form {
+    max-width: 80%;
+  }
+
+  .hamburguesa {
+    display: block;
+    background-color: rgb(28, 58, 45);
+    text-align: center;
+}
+
+.desplegable {
+    position: relative;
+    width: 100%;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: whitesmoke;
+    z-index: 10;
+}
+
+.desplegable:hover .menu {
+    display: block;
+}
+
+.menu ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu ul li {
+    margin: 1vh 0;
+}
+
+  .redes {
+    padding: 0;
+  }
+}
+
+/*Adaptación optimizada para verse en un teléfono posición vertical.*/
+@media screen and (max-width: 599px) and (orientation: portrait) {
+  header {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  header .logo {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .logo img {
+    align-items: center;
+  }
+
+  .titulo {
+    margin: auto;
+  }
+
+  .titulo h1 {
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  .redes {
+    padding-right: 0;
+}
+
+  form {
+    max-width: 95%;
+  }
+
+  .hamburguesa {
+    display: block;
+    background-color: rgb(28, 58, 45);
+    text-align: center;
+}
+
+.desplegable {
+    position: relative;
+    width: 100%;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: whitesmoke;
+    z-index: 10;
+}
+
+.desplegable:hover .menu {
+    display: block;
+}
+
+.menu ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu ul li {
+    margin: 1vh 0;
+}
 }
